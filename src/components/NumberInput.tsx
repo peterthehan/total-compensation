@@ -76,7 +76,7 @@ const NumberInput: FC<NumberInputProps> = ({
   };
 
   return (
-    <div>
+    <div className="input">
       {label && <div>{label}</div>}
       {prefix}
       <input

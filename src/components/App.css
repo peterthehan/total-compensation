@@ -9,6 +9,12 @@ div.child-container {
   max-width: 90vw;
 }
 
+details,
+div.input {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 div.horizontal-scroll {
   overflow-x: auto;
 }
