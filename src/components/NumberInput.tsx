@@ -79,7 +79,12 @@ const NumberInput: FC<NumberInputProps> = ({
     <div>
       {label && <div>{label}</div>}
       {prefix}
-      <input type="search" onChange={handleChange} value={formatValue(value)} />
+      <input
+        type="search"
+        inputMode="decimal"
+        onChange={handleChange}
+        value={formatValue(value)}
+      />
       {suffix}
     </div>
   );
