@@ -1,0 +1,23 @@
+div.parent-container {
+  display: grid;
+  justify-content: center;
+}
+
+div.child-container {
+  margin: 1em;
+  min-width: 30vw;
+  max-width: 90vw;
+}
+
+div.horizontal-scroll {
+  overflow-x: auto;
+}
+
+table {
+  border: 1px solid black;
+  width: 100%;
+}
+
+td {
+  border: 1px solid black;
+}
