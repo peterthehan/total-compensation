@@ -2,6 +2,7 @@ import { FC } from "react";
 import "./App.css";
 import Form from "./Form";
 import Result from "./Result";
+import Footer from "./Footer";
 import useQueryString from "../hooks/useQueryString";
 import useQueryStringArray from "../hooks/useQueryStringArray";
 import generateId from "../utils/generateId";
@@ -106,7 +107,6 @@ const App: FC = () => {
           }}
           ids={ids}
         />
-        <hr />
         <Result
           compensation={{
             baseSalary,
@@ -122,6 +122,7 @@ const App: FC = () => {
           }}
           ids={ids}
         />
+        <Footer />
       </div>
     </div>
   );
