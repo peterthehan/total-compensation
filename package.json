@@ -2,7 +2,7 @@
   "name": "total-compensation",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://peterthehan.github.io/total-compensation",
+  "homepage": "https://peterthehan.github.io/total-compensation/",
   "scripts": {
     "predeploy": "npm run build",
     "build": "react-scripts build",
