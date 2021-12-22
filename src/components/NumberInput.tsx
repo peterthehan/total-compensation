@@ -25,7 +25,7 @@ const NumberInput: FC<NumberInputProps> = ({
   formatValue = humanizeInputNumber,
 }) => {
   const sanitize = (value: string): string => {
-    return value.replace(/[^-\d.]/g, "");
+    return value.replace(/[^-\d.]+/g, "");
   };
 
   const validate = (value: string): boolean => {

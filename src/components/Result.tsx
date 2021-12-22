@@ -90,7 +90,7 @@ const Result: FC<ResultProps> = ({
   const total = calculateTotal(calculation);
 
   return (
-    <>
+    <div className="spacer">
       <b>{`Total ${numVestingSchedule.length}-year Compensation`}</b>
       <div className="horizontal-scroll">
         {`$${humanizeRenderNumber(total.toString())}`}
@@ -123,7 +123,7 @@ const Result: FC<ResultProps> = ({
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 };
 

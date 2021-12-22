@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "./App.css";
+import Copy from "./Copy";
 import Form from "./Form";
 import Result from "./Result";
 import Footer from "./Footer";
@@ -85,7 +86,10 @@ const App: FC = () => {
     <div className="parent-container">
       <div className="child-container">
         <h1>Total Compensation</h1>
-        <button onClick={handleReset}>Reset Form</button>
+        <Copy text={window.location.href} />
+        <div className="spacer">
+          <button onClick={handleReset}>📝 Reset Form</button>
+        </div>
         <Form
           compensation={{
             baseSalary,

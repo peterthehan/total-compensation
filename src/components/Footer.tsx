@@ -2,9 +2,9 @@ import { FC } from "react";
 
 const Footer: FC = () => {
   return (
-    <p>
+    <div className="spacer">
       Made with ❤️ by <a href="https://github.com/peterthehan">Peter</a>
-    </p>
+    </div>
   );
 };
 

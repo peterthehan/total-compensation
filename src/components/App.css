@@ -5,11 +5,14 @@ div.parent-container {
 
 div.child-container {
   margin: 1em;
-  min-width: 30vw;
-  max-width: 90vw;
+  width: 90vw;
 }
 
-details,
+.spacer {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 div.input {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -17,13 +20,10 @@ div.input {
 
 div.horizontal-scroll {
   overflow-x: auto;
+  white-space: nowrap;
 }
 
-table {
-  border: 1px solid black;
-  width: 100%;
-}
-
+table,
 td {
   border: 1px solid black;
 }

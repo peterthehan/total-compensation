@@ -35,7 +35,7 @@ const Form: FC<FormProps> = ({
   ids,
 }) => {
   return (
-    <>
+    <div className="spacer">
       <details open>
         <summary>Basic</summary>
         <NumberInput
@@ -115,7 +115,7 @@ const Form: FC<FormProps> = ({
           onChange={setMiscellaneous}
         />
       </details>
-    </>
+    </div>
   );
 };
 
