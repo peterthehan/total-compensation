@@ -2,8 +2,11 @@
   "name": "total-compensation",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://peterthehan.github.io/total-compensation",
   "scripts": {
+    "predeploy": "npm run build",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test"
@@ -39,5 +42,8 @@
     "react-scripts": "5.0.0",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
