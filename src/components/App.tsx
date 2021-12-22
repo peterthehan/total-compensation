@@ -3,8 +3,8 @@ import "./App.css";
 import Form from "./Form";
 import Result from "./Result";
 import Footer from "./Footer";
-import useQueryString from "../hooks/useQueryString";
-import useQueryStringArray from "../hooks/useQueryStringArray";
+import useStringArrayQueryString from "../hooks/useStringArrayQueryString";
+import useStringQueryString from "../hooks/useStringQueryString";
 import generateId from "../utils/generateId";
 
 const initialBaseSalary = "";
@@ -27,37 +27,43 @@ const ids = [
 ];
 
 const App: FC = () => {
-  const [baseSalary, setBaseSalary] = useQueryString("bs", initialBaseSalary);
-  const [totalStock, setTotalStock] = useQueryString("sg", initialTotalStock);
-  const [signingBonusOne, setSigningBonusOne] = useQueryString(
+  const [baseSalary, setBaseSalary] = useStringQueryString(
+    "bs",
+    initialBaseSalary
+  );
+  const [totalStock, setTotalStock] = useStringQueryString(
+    "sg",
+    initialTotalStock
+  );
+  const [signingBonusOne, setSigningBonusOne] = useStringQueryString(
     "sbone",
     initialSigningBonusOne
   );
-  const [baseSalaryGrowth, setBaseSalaryGrowth] = useQueryString(
+  const [baseSalaryGrowth, setBaseSalaryGrowth] = useStringQueryString(
     "bsgr",
     initialBaseSalaryGrowth
   );
-  const [stockGrowth, setStockGrowth] = useQueryString(
+  const [stockGrowth, setStockGrowth] = useStringQueryString(
     "gr",
     initialStockGrowth
   );
-  const [vestingSchedule, setVestingSchedule] = useQueryStringArray(
+  const [vestingSchedule, setVestingSchedule] = useStringArrayQueryString(
     "ve",
     initialVestingSchedule
   );
-  const [signingBonusTwo, setSigningBonusTwo] = useQueryString(
+  const [signingBonusTwo, setSigningBonusTwo] = useStringQueryString(
     "sbtwo",
     initialSigningBonusTwo
   );
-  const [performanceBonus, setPerformanceBonus] = useQueryString(
+  const [performanceBonus, setPerformanceBonus] = useStringQueryString(
     "bp",
     initialPerformanceBonus
   );
-  const [relocationBonus, setRelocationBonus] = useQueryString(
+  const [relocationBonus, setRelocationBonus] = useStringQueryString(
     "rb",
     initialRelocationBonus
   );
-  const [miscellaneous, setMiscellaneous] = useQueryString(
+  const [miscellaneous, setMiscellaneous] = useStringQueryString(
     "misc",
     initialMiscellaneous
   );

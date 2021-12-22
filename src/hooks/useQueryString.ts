@@ -1,17 +1,28 @@
 import { useState, useCallback } from "react";
-import { getQueryStringValue, setQueryStringValue } from "../utils/queryString";
+import { getQueryString, setQueryString } from "../utils/queryString";
 
-const useQueryString = (
+const useQueryString = <T>(
   key: string,
-  initialValue: string
-): [string, Setter<string>] => {
-  const [value, setValue] = useState(getQueryStringValue(key, initialValue));
+  initialValue: T,
+  converter: (string: string) => T,
+  reverseConverter: (value: T) => string,
+  equalityChecker: (value: T, initialValue: T) => boolean
+): [T, Setter<T>] => {
+  const [value, setValue] = useState(
+    getQueryString(key, initialValue, converter)
+  );
   const onSetValue = useCallback(
-    (newValue: string) => {
+    (newValue: T) => {
       setValue(newValue);
-      setQueryStringValue(key, newValue, initialValue);
+      setQueryString(
+        key,
+        newValue,
+        initialValue,
+        reverseConverter,
+        equalityChecker
+      );
     },
-    [key, initialValue]
+    [key, initialValue, reverseConverter, equalityChecker]
   );
 
   return [value, onSetValue];
