@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://tc.peterhan.dev/",
   "scripts": {
-    "predeploy": "npm run build",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
@@ -41,9 +41,24 @@
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "typescript": "^4.5.4",
-    "web-vitals": "^2.1.2"
+    "web-vitals": "^2.1.2",
+    "workbox-background-sync": "^5.1.4",
+    "workbox-broadcast-update": "^5.1.4",
+    "workbox-cacheable-response": "^5.1.4",
+    "workbox-core": "^5.1.4",
+    "workbox-expiration": "^5.1.4",
+    "workbox-google-analytics": "^5.1.4",
+    "workbox-navigation-preload": "^5.1.4",
+    "workbox-precaching": "^5.1.4",
+    "workbox-range-requests": "^5.1.4",
+    "workbox-routing": "^5.1.4",
+    "workbox-strategies": "^5.1.4",
+    "workbox-streams": "^5.1.4"
   },
   "devDependencies": {
+    "@types/workbox-expiration": "^4.3.1",
+    "@types/workbox-routing": "^4.3.1",
+    "@types/workbox-strategies": "^4.3.1",
     "gh-pages": "^3.2.3"
   }
 }
