@@ -6,7 +6,7 @@ Calculate your total compensation.
 
 Inspired by https://www.levels.fyi/calculator.
 
-## Get started
+## Getting started
 
 To begin local development, run:
 
